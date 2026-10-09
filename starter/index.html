@@ -1,101 +1,153 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Sales table as a figure</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Sales Report</title>
 
     <style>
-
-        /* ==========================================
-           COMPLETE THE CSS
-           ========================================== */
-
-        figure,
-        figcaption {
-            /* Reset margin and padding */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            padding: 30px;
         }
 
         figure {
-            /* Add border */
-            /* Set width to 450px */
-            /* Add 15px padding */
+            max-width: 650px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #1e3a5f;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px #cccccc;
         }
 
         figcaption {
-            /* Display as block */
-            /* Make text bold */
-            /* Center text */
-            /* Set font size to 120% */
-            /* Add bottom padding */
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3a5f;
+            margin-bottom: 20px;
         }
 
         table {
-            /* Collapse borders */
-            /* Add border */
-            /* Center the table */
-            /* Add 10px top/bottom margin */
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        thead,
-        tfoot {
-            /* Aqua background */
-            /* Bold text */
-            /* Border */
+        thead {
+            background-color: #1e3a5f;
+            color: white;
         }
 
-        th,
-        td {
-            /* Add padding */
-            /* Right-align text */
-            /* Add border */
+        th, td {
+            padding: 12px;
+            border: 1px solid #cccccc;
+            text-align: right;
         }
 
         th:first-child,
         td:first-child {
-            /* Left-align first column */
+            text-align: left;
         }
 
-        tr td:nth-child(2) {
-            /* Center second column */
+        th:nth-child(2),
+        td:nth-child(2) {
+            text-align: center;
         }
 
-        tbody tr:nth-child(2n) {
-            /* Silver background for alternate rows */
+        tbody tr:nth-child(even) {
+            background-color: #e8f1fa;
         }
 
+        tbody tr:hover {
+            background-color: #d1e5f5;
+        }
+
+        tfoot {
+            background-color: #d5e8d4;
+            font-weight: bold;
+            color: #205522;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 10px;
+            }
+
+            figure {
+                padding: 10px;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 8px;
+                font-size: 13px;
+            }
+
+            figcaption {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <figure>
+<figure>
+    <figcaption>Book Sales Report</figcaption>
 
-        <figcaption>Total Sales by Book</figcaption>
+    <table>
+        <thead>
+            <tr>
+                <th>Book</th>
+                <th>Year Published</th>
+                <th>Sales</th>
+            </tr>
+        </thead>
 
-        <table>
+        <tbody>
+            <tr>
+                <td>PHP and MySQL</td>
+                <td>2014</td>
+                <td>$372,381</td>
+            </tr>
+            <tr>
+                <td>JavaScript and jQuery</td>
+                <td>2015</td>
+                <td>$305,447</td>
+            </tr>
+            <tr>
+                <td>Java Programming</td>
+                <td>2011</td>
+                <td>$392,444</td>
+            </tr>
+            <tr>
+                <td>Java Servlets and JSP</td>
+                <td>2014</td>
+                <td>$328,992</td>
+            </tr>
+            <tr>
+                <td>ASP.NET with Visual Basic</td>
+                <td>2011</td>
+                <td>$351,200</td>
+            </tr>
+            <tr>
+                <td>ASP.NET with C#</td>
+                <td>2011</td>
+                <td>$404,332</td>
+            </tr>
+        </tbody>
 
-            <thead>
-                <tr>
-                    <!-- Add table headings -->
-                </tr>
-            </thead>
-
-            <tbody>
-
-                <!-- Add six book records -->
-
-            </tbody>
-
-            <tfoot>
-                <tr>
-                    <!-- Add total sales -->
-                </tr>
-            </tfoot>
-
-        </table>
-
-    </figure>
+        <tfoot>
+            <tr>
+                <th>Total Sales</th>
+                <td> </td>
+                <td>$2,154,796</td>
+            </tr>
+        </tfoot>
+    </table>
+</figure>
 
 </body>
-
 </html>
